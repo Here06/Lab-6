@@ -33,6 +33,13 @@
             </form>
         </div>
 
+        <script>
+            (async function() {
+                const { text } = await( await fetch(`/api/message`)).json();
+                document.querySelector('#name').textContent = text;
+            }());
+            </script>
+
     </main>
     <footer>
         <p>&copy; 2024 Lcky-Lot Cars</p>
